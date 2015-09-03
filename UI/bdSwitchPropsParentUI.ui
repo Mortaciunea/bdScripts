@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>bdSwitchParentWin</class>
+ <widget class="QMainWindow" name="bdSwitchParentWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>251</width>
+    <height>375</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>115</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>115</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>hat </string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="headToL">
+         <property name="text">
+          <string>Hat -&gt; Left Hand</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="headToR">
+         <property name="text">
+          <string>Hat -&gt; Right Hand</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="handToHead">
+         <property name="text">
+          <string>Hand -&gt; Head</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>210</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Candybox</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="candyboxToL">
+         <property name="text">
+          <string>Candybox -&gt; Left Hand</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="candyboxToR">
+         <property name="text">
+          <string>Candybox -&gt; Right Hand</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="candyboxToWorld">
+         <property name="text">
+          <string>Candybox -&gt; World</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="candyboxLidToL">
+         <property name="text">
+          <string>Candybox Lid -&gt; Left Hand</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="candyboxLidToR">
+         <property name="text">
+          <string>Candybox Lid -&gt; Right Hand</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="candyboxLidToBox">
+         <property name="text">
+          <string>Candybox Lid -&gt;Candybox</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

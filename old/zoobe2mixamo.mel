@@ -1,0 +1,56 @@
+string speakAnims[] = ['speak_jaw_down','speak_jaw_up','speak_mouth_narrow','speak_mouth_wide','speak_mouth_open','speak_mouth_shut','speak_tongue_in','speak_tongue_out'];
+
+string $CHARACTERS_PATH = 'p:/mixamo_character/working_project/scenes/characters/';
+string $ASSETS_PATH = 'p:/mixamo_character/assets/';
+string $ANIM_LIB_PATH = 'p:/mixamo_character/working_project/data/animLib/';
+int $MIN_HEIGHT = 15;
+int $MAX_HEIGHT = 15;
+
+global proc string[] zooUtilsReverseArray( string $array[] ){
+ 	string $reversedArray[];
+ 	int $arraySize = `size $array`;
+ 
+ 	for( $n = 0; $n < $arraySize; $n++ ) $reversedArray[( $arraySize - 1 - $n )] = $array[$n];
+ 	return $reversedArray;
+ 	}
+
+global proc removeNamespace(){
+
+	string $sceneNS[] = `namespaceInfo -lon -r`;
+	string $importNS[];
+	string $mayaNS[] = {"UI", "shared"};
+
+	int $nsNum = `size($sceneNS)`;
+	int $j=0;
+	for($i=0;$i < size($sceneNS);$i++){
+		if(!stringArrayContains($sceneNS[$i],$mayaNS)){
+			$importNS[$j] = $sceneNS[$i];
+			$j++;
+		}
+	}
+
+	
+    for($i=0;$i < size($importNS);$i++){
+        namespace -rm $importNS[$i] -mergeNamespaceWithRoot;
+		}
+	}
+
+
+global proc importFbx(string $fbxPath) {
+	print "importFbx \n";
+	loadPlugin fbxmaya;
+	string $project = `workspace -q -active`;
+	print ($project + "\n");
+	
+	file -import -type "FBX" -ra true -mergeNamespacesOnClash false -rpr "mixamo" -options "v=0;" -loadReferenceDepth "all" $fbxPath;
+	string $saveFile = $project + "/scenes/test.mb";
+	print ($saveFile + "\n") ;
+	file -rename  $saveFile;
+	file -f -save  -options "v=0;" -type "mayaBinary";
+
+}
+	
+global proc MixamoCharacter( string $fbxPath, string $charName){
+	print $fbxPath;
+	importFbx($fbxPath);
+}

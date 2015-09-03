@@ -1,0 +1,1 @@
+import maya.cmds as cmdsdef createSwitch(root):	pC = cmds.listRelatives(c=True, typ = 'parentConstraint')	attr = cmds.listAttr(pC, v=True,ud=True)	print attrselection = cmds.ls(sl=True)multDivNode = cmds.createNode('multiplyDivide',name='switchMD')revNode = cmds.createNode('reverse',name='switchRev')

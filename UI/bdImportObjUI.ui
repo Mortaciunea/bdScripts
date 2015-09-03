@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>bdImportObjWin</class>
+ <widget class="QMainWindow" name="bdImportObjWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>633</width>
+    <height>627</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>152</height>
+       </size>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="2">
+          <widget class="QPushButton" name="objPathBtn">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">    QPushButton{
+                                    color: white;
+                                    border-radius: 4px;
+                                    min-height: 30px;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #103050, stop: 1 #0d5ca6);
+                                   }
+    QPushButton:hover {
+                                    color: white;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #13385d, stop: 1 #2570bb);
+                                   }                                     
+    QPushButton:pressed {
+                                    color: white;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #0d5ca6, stop: 1 #2198c0);
+                                   }  
+    QPushButton:disabled{
+                                    color: gray;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #616161, stop: 1 #292929);
+                                   }</string>
+           </property>
+           <property name="text">
+            <string>Browse</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="text">
+            <string>Obj Path</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="objPath"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>400</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Objs</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTableWidget" name="objFilesTableWidget">
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>File name</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="importBtn">
+         <property name="styleSheet">
+          <string notr="true">    QPushButton{
+                                    color: white;
+                                    border-radius: 4px;
+                                    min-height: 30px;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #103050, stop: 1 #0d5ca6);
+                                   }
+    QPushButton:hover {
+                                    color: white;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #13385d, stop: 1 #2570bb);
+                                   }                                     
+    QPushButton:pressed {
+                                    color: white;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #0d5ca6, stop: 1 #2198c0);
+                                   }  
+    QPushButton:disabled{
+                                    color: gray;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #616161, stop: 1 #292929);
+                                   }</string>
+         </property>
+         <property name="text">
+          <string>Import Objs</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="exportBtn">
+         <property name="styleSheet">
+          <string notr="true">    QPushButton{
+                                    color: white;
+                                    border-radius: 4px;
+                                    min-height: 30px;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #103050, stop: 1 #0d5ca6);
+                                   }
+    QPushButton:hover {
+                                    color: white;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #13385d, stop: 1 #2570bb);
+                                   }                                     
+    QPushButton:pressed {
+                                    color: white;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #0d5ca6, stop: 1 #2198c0);
+                                   }  
+    QPushButton:disabled{
+                                    color: gray;
+                                    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #616161, stop: 1 #292929);
+                                   }</string>
+         </property>
+         <property name="text">
+          <string>Export Objs</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>0</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCopy_To_Preview">
+   <property name="text">
+    <string>Copy To Preview</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>objPath</tabstop>
+  <tabstop>objPathBtn</tabstop>
+  <tabstop>objFilesTableWidget</tabstop>
+  <tabstop>importBtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
